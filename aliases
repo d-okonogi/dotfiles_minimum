@@ -1,0 +1,55 @@
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='eza --icons --group-directories-first --color=always'
+alias watch='watch -c'
+alias ll='ls -l'
+alias la='ls -aF'
+alias lal='ls -la'
+# screen
+alias sc='screen -D -RR'
+alias sls='screen -ls'
+# tmux
+alias tls='tmux ls'
+alias ta='tmux a'
+alias tat='tmux a -t'
+alias tn='tmux new -s'
+alias lv='lv -Ou8'
+alias vim=nvim
+alias vi=nvim
+# git aliases
+alias g='git'
+alias gd='git diff'
+alias gb='git branch'
+alias gco='git checkout'
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias ga='git add'
+alias ga.='git add . && git commit -F- << EOM'
+alias ga.p='git add . && git commit -F- << EOM && git push'
+alias gc='git commit'
+alias gcm='git commit -F- << EOM'
+alias gf='git fetch'
+alias gwhoami='git config user.name'
+tmpcmd() {
+    tput smcup
+    "$@"
+    tput rmcup
+}
+alias ggr='tmpcmd git log --color=always --graph --all --decorate --pretty=format:"%C(yellow)%h%C(cyan) %ad%C(green) %an<%ae>%C(reset) %d %s" | less -R'
+alias cdd='cd $(ghq root)/$(ghq list | fzf)'
+tm() {
+  if [ -n "$TMUX" ]; then
+    echo "Already in tmux ($TMUX)"
+    return
+  fi
+
+  local name=${1:-main}
+  if tmux has-session -t "$name" 2>/dev/null; then
+    tmux attach -t "$name"
+  else
+    tmux new -s "$name"
+  fi
+}
+alias t=tm

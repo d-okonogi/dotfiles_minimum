@@ -1,0 +1,32 @@
+startup_message off
+shell $SHELL
+
+## current command name as window name
+#
+#hardstatus alwayslastline "%{= cd} %-w%{= dd} %n %t* %{-}%+w %= LoadAVG [%l] "
+#
+#hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w %=%H [%Y-%m-%d %02c:%s]"
+hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y %m/%d %C:%s%a"
+hardstatus off
+#
+escape ^Tt
+#
+termcap * 'G0:S0=\E(%.:E0=\E(B:TY=iso2022'
+termcapinfo xterm* ti@:te@
+autodetach on
+crlf off
+vbell off
+vbell_msg "Bell"
+
+defflow off
+defutf8 on
+defkanji utf8
+defbce on
+defscrollback 1000000
+defencoding utf8
+encoding utf8 utf8
+term xterm-256color
+
+bind o focus
+bind k kill
+bind s splitn
