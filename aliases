@@ -1,7 +1,7 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='eza --icons --group-directories-first --color=always'
+# alias ls='eza --icons --group-directories-first --color=always'
 alias watch='watch -c'
 alias ll='ls -l'
 alias la='ls -aF'

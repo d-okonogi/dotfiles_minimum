@@ -1,0 +1,1 @@
+/home/oko/.dotfiles/config/nvim/init.lua
