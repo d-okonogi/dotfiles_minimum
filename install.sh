@@ -28,4 +28,4 @@ ln -s $ROOT/nvim/lua/options.lua $HOME/.config/nvim/lua/options.lua
 ln -s $ROOT/nvim/lua/plugins.lua $HOME/.config/nvim/lua/plugins.lua
 ln -s $ROOT/nvim/lua/base.lua $HOME/.config/nvim/lua/base.lua
 ln -s $ROOT/nvim/lua/colorscheme.lua $HOME/.config/nvim/lua/colorscheme.lua
-ln -s $ROOT/nvim/lua/ $HOME/.config/nvim/
+ln -s $ROOT/nvim/lua/coc.lua $HOME/.config/nvim/lua/coc.lua

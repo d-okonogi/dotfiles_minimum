@@ -1,1 +1,4 @@
-/home/oko/.dotfiles/config/nvim/lua/base.lua
+vim.cmd("autocmd!")
+vim.scriptencoding = "utf-8"
+vim.wo.number = true
+vim.o.autoread = true
